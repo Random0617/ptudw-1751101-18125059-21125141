@@ -23,6 +23,9 @@ app.set("view engine", "hbs");
 app.get("/", (req, res) => {
   res.render("index");
 });
+app.get("/:page", (req, res) => {
+  res.render(req.params.page);
+});
 
 // Starting the web server
 app.listen(port, () => {
